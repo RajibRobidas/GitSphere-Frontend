@@ -1,0 +1,199 @@
+/* === Dashboard Wrapper === */
+#dashboard {
+  display: flex;
+  width: 1080px;
+  margin: 20px auto;
+  gap: 20px;
+
+  background-color: #0d1117; /* Dark GitHub-like background */
+  color: #c9d1d9;           /* Light text for dark bg */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* === Left Sidebar (Suggested Repositories) === */
+#dashboard > aside:first-of-type {
+  flex: 1;
+  background-color: #161b22; /* Slightly lighter dark panel */
+  color: #c9d1d9;
+
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+#dashboard > aside:first-of-type h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #f0f6fc;
+}
+
+#dashboard > aside:first-of-type .repo-card {
+  background-color: #0d1117;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  transition: background 0.2s;
+}
+
+#dashboard > aside:first-of-type .repo-card:hover {
+  background-color: #21262d;
+}
+
+#dashboard > aside:first-of-type .repo-card h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #58a6ff; /* Repo name highlighted */
+}
+
+#dashboard > aside:first-of-type .repo-card p {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #8b949e;
+}
+
+/* === Main Section (Your Repositories) === */
+#dashboard main {
+  flex: 2;
+  background-color: #161b22;
+  color: #c9d1d9;
+
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+#dashboard main h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #f0f6fc;
+}
+
+#dashboard #search {
+  margin-bottom: 16px;
+}
+
+#dashboard #search input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  outline: none;
+
+  font-size: 14px;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+#dashboard #search input:focus {
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 2px rgba(88,166,255,0.2);
+}
+
+/* Each repository card in main */
+#dashboard main .repo-card {
+  background-color: #0d1117;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  transition: background 0.2s;
+}
+
+#dashboard main .repo-card:hover {
+  background-color: #21262d;
+}
+
+#dashboard main .repo-card h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #58a6ff;
+}
+
+#dashboard main .repo-card p {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #8b949e;
+}
+
+/* === Right Sidebar (Events) === */
+#dashboard > aside:last-of-type {
+  flex: 1;
+  background-color: #161b22;
+  color: #c9d1d9;
+
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+#dashboard > aside:last-of-type h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #f0f6fc;
+}
+
+#dashboard > aside:last-of-type ul {
+  list-style: none;
+  padding: 0;
+}
+
+#dashboard > aside:last-of-type li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #0d1117;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  transition: background 0.2s;
+}
+
+#dashboard > aside:last-of-type li:hover {
+  background-color: #21262d;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 768px) {
+  #dashboard {
+    flex-direction: column;
+    width: 95%;
+  }
+}
+
+/* === Repository Card === */
+.repo-card {
+  background-color: #0d1117; /* Dark card */
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+}
+
+.repo-card h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #58a6ff; /* Repository name in blue */
+}
+
+.repo-card p {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #8b949e; /* Description in lighter gray */
+}
+
+/* Hover effect */
+.repo-card:hover {
+  background-color: #21262d;
+  border-color: #58a6ff;
+  cursor: pointer;
+}

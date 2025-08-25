@@ -1,0 +1,111 @@
+/* Profile Page Wrapper */
+.profile-page-wrapper {
+  display: flex;
+  gap: 50px; /* space between profile and heatmap */
+  padding: 40px 20px;
+  color: whitesmoke;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center; /* center on smaller screens */
+}
+
+/* User Profile Section */
+.user-profile-section {
+  background-color: #1f2228;
+  border-radius: 16px;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-width: 250px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease-in-out;
+}
+
+.user-profile-section:hover {
+  transform: translateY(-3px);
+}
+
+/* Profile Image */
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: grey;
+  border: 3px solid #8aa7d5;
+  margin-bottom: 10px;
+}
+
+/* User Name */
+.name h3 {
+  color: whitesmoke;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+/* Follow Button */
+.follow-btn {
+  width: 140px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #8aa7d5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.follow-btn:hover {
+  background-color: #8aa7d5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Follower / Following */
+.follower {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  color: #bbb;
+  font-weight: 500;
+}
+
+.follower p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Heatmap Section */
+.heat-map-section {
+  flex: 1;
+  background-color: #1f2228;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.heat-map-section:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .profile-page-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .heat-map-section,
+  .user-profile-section {
+    width: 100%;
+  }
+}
