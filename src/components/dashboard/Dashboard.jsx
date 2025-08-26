@@ -14,7 +14,7 @@ const DashBoard = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          `13.53.150.225:3002/repo/user/${userId}`
+          `http://13.53.150.225:3002/repo/user/${userId}`
         );
 
         const data = await response.json();
@@ -27,7 +27,7 @@ const DashBoard = () => {
 
     const fetchSuggestedRepositories = async () => {
       try {
-        const response = await fetch(`13.53.150.225:3002/repo/all`);
+        const response = await fetch(`http://13.53.150.225:3002/repo/all`);
 
         const data = await response.json();
         setSuggestedRepositories(data);
