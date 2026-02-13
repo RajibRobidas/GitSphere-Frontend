@@ -26,7 +26,7 @@ const Login = () => {
 
     try {
       setLoading(true);
-      const res = await axios.post("http://13.53.150.225:3002/login", {
+      const res = await axios.post("http://ec2-16-171-8-220.eu-north-1.compute.amazonaws.com:3002/login", {
         email: email,
         password: password,
       });

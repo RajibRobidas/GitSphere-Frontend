@@ -21,7 +21,7 @@ const Profile = () => {
       if (userId) {
         try {
           const response = await axios.get(
-            `http://13.53.150.225:3002/userProfile/${userId}`
+            `http://ec2-16-171-8-220.eu-north-1.compute.amazonaws.com:3002/userProfile/${userId}`
           );
           setUserDetails(response.data);
         } catch (err) {

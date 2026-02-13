@@ -14,7 +14,7 @@ const DashBoard = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          `http://13.53.150.225:3002/repo/user/${userId}`
+          `http://ec2-16-171-8-220.eu-north-1.compute.amazonaws.com:3002/repo/user/${userId}`
         );
 
         const data = await response.json();
@@ -27,7 +27,7 @@ const DashBoard = () => {
 
     const fetchSuggestedRepositories = async () => {
       try {
-        const response = await fetch(`http://13.53.150.225:3002/repo/all`);
+        const response = await fetch(`http://ec2-16-171-8-220.eu-north-1.compute.amazonaws.com:3002/repo/all`);
 
         const data = await response.json();
         setSuggestedRepositories(data);

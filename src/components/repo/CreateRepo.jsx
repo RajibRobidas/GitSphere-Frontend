@@ -33,7 +33,7 @@ const CreateRepo = () => {
     setMessage("Creating repository...");
 
     try {
-      const res = await axios.post("http://13.53.150.225:3002/repo/create", formData);
+      const res = await axios.post("http://ec2-16-171-8-220.eu-north-1.compute.amazonaws.com:3002/repo/create", formData);
       setMessage(res.data.message || "Repository created!");
       setFormData((prev) => ({
         ...prev,
